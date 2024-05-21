@@ -68,7 +68,7 @@ pip3 install --user -r bootloader/mcuboot/scripts/requirements.txt
 ```
 ## Installing the toolchain
 
-*(you can skip this if you already have the Zephyr SDK installed and setup)*
+*(you can skip this if you already have the Zephyr SDK installed and setup)*  
 *(blueprints have been tested on Zephyr SDK 0.16.4)*
 
 1. Download and verify the Zephyr SDK 0.16.4 bundle:
