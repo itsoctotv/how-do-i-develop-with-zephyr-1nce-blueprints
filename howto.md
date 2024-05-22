@@ -113,4 +113,10 @@ You can test it with this command:
 ```
 nrfjprog -v
 ```
+You should see something like this:
+```
+$ nrfjprog -v
+nrfjprog version: 10.24.2 external
+JLinkARM.dll version: 7.94e
+```
 
