@@ -94,4 +94,23 @@ sudo udevadm control --reload
 ```
 source zephyr/zephyr-env.sh
 ```
-## Installing nRF Command Line Tools (todo)
+## Installing nRF Command Line Tools 
+*(blueprints have been tested on version 10.24.2 Linux x86 64)*  
+
+Get the latest debian package from [here](https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools/Download?lang=en#infotabs). Select "Linux x86 64" and click on the .deb file.  
+Or click [here](https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/desktop-software/nrf-command-line-tools/sw/versions-10-x-x/10-24-2/nrf-command-line-tools_10.24.2_amd64.deb) to download it directly.  
+
+Next go to the location you downloaded it from and execute this command:
+```
+sudo dpkg -i nrf-command-line-tools_10.24.2_amd64.deb 
+```
+after that execute this command:
+```
+sudo apt install /opt/nrf-command-line-tools/share/JLink_Linux_V794e_x86_64.deb --fix-broken
+```
+The nRF Command Line Tools should now be installed along with its dependencies.  
+You can test it with this command: 
+```
+nrfjprog -v
+```
+
