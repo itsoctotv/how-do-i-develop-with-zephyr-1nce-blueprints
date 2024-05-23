@@ -119,4 +119,7 @@ $ nrfjprog -v
 nrfjprog version: 10.24.2 external
 JLinkARM.dll version: 7.94e
 ```
+## Integrating the 1NCE IoT C SDK 
+
+
 
