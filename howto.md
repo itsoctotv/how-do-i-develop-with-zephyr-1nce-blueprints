@@ -193,7 +193,7 @@ west flash
 3. Hold the middle button (SW3) on the Thingy:91 board.  
 4. Switch on the power (SW1) to the Thingy:91.   
 This will get the Thingy:91 into MCU-Boot Mode.    
-### Flash the thingy:91 board:  
+### Flash the Thingy:91 board:  
 *(i hope there is a better way for flashing this)*   
 
 To do this you first need to download the nRF Connect Desktop App [here](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop/Download?lang=en#infotabs), select "Linux" and download the AppImage.   
@@ -202,14 +202,15 @@ Open the AppImage by typing in this command:
 ```
 exec ~/Downloads/nrfconnect-5.0.0-x86_64.appimage
 ```
-After starting the app install the "Programmer" toolby clicking on "Install" next to the Programmer tool option. And click on "Open".   
+After starting the app install the "Programmer" tool by clicking on "Install" next to the Programmer tool option. And click on "Open".   
 
 **Make sure the board is in MCU-Boot Mode**  
  
 1. Click on "Select Device" and select the Thingy:91 board.  
-2. Click on "Add file" on the top left corner and navigate to the `build/` folder and select the `app_signed.hex` for this example it is at `~/ncs/nrf/build/zephyr/app_signed.hex`.  
+2. Click on "Add file" on the top left corner and navigate to the `build/` folder and select the `app_signed.hex`.    
+For this example it is at `~/ncs/nrf/build/zephyr/app_signed.hex`.   
 3. Finally press the "Write" button on the left side.  
-This will flash the .hex file onto the Thingy:91 board.
+This will flash the .hex file onto the Thingy:91 board.  
 *(it might take some time)*  
 
 
