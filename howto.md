@@ -183,7 +183,7 @@ Build for the thingy:91 board:
 ```
 west build -p -b thingy91_nrf9160_ns ../blueprint-zephyr/nce_udp_demo/
 ```
-### Flash the nRF9160 DK board:  
+### Flash the nRF9160 DK board    
 ```
 west flash
 ```
@@ -193,7 +193,7 @@ west flash
 3. Hold the middle button (SW3) on the Thingy:91 board.  
 4. Switch on the power (SW1) to the Thingy:91.   
 This will get the Thingy:91 into MCU-Boot Mode.    
-### Flash the Thingy:91 board:  
+### Flash the Thingy:91 board    
 *(i hope there is a better way for flashing this)*   
 
 To do this you first need to download the nRF Connect Desktop App [here](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop/Download?lang=en#infotabs), select "Linux" and download the AppImage.   
