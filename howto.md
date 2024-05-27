@@ -45,6 +45,7 @@ cd ncs/
 ```
 west init -m https://github.com/nrfconnect/sdk-nrf --mr v2.2.0
 ```
+There should be a folder named `nrf/`, go into it.  
 4. After that clone the project repositories:
 ```
 west update
@@ -121,5 +122,91 @@ JLinkARM.dll version: 7.94e
 ```
 ## Integrating the 1NCE IoT C SDK 
 
+1. Change into your home directory.  
+```
+cd ~/
+```
+2. Execute this command:  
+```
+west init -m https://github.com/1NCE-GmbH/1nce-iot-c-sdk
+```
+3. After that is finished change into the newly created directory:  
+```
+cd ~/1nce-iot-c-sdk/
+``` 
+4. In the directory execute this command:  
+```
+west update
+```
+5. Next go into the previously created and set up `~/ncs/nrf` directory:  
+```
+cd ~/ncs/nrf/
+```
+6. Open the `west.yml` file with a text editor of your choice and 
+search for the keybord `name-allowlist` and add `nce-sdk` to the list.  
+**Keep in mind to add it in alphabetically**  
+*(under nanopb)*  
+Save and close the file.
+7. Change directory to `cd ~/ncs/zephyr/submanifests/`.  
+8. Rename the example.yaml.sample to example.yaml.  
+```
+mv example.yaml.sample example.yaml
+```
+9. Open the `example.yaml` with your text editor of choice and edit it so that is looks like this:  
+```
+manifest:
+  projects:
+    - name: nce-sdk
+      url: https://github.com/1NCE-GmbH/1nce-iot-c-sdk
+      revision: main
+
+```
+Save and close the file.  
+10. Inside the `~/ncs/` directory run `west update`. This will integrate the 1NCE IoT C SDK.  
+
+## Cloning and Flashing the Zephyr Blueprints
+1. Go into the `~/ncs/` directory and clone the blueprint repository.  
+```
+git clone https://github.com/1NCE-GmbH/blueprint-zephyr.git
+```
+2. Change directory to the `nrf/` folder:  
+```
+cd nrf/
+```
+3. And execute this command to build the UDP Blueprint:     
+Build for the nRF9160 DK board:  
+```
+west build -p -b nrf9160dk_nrf9160_ns ../blueprint-zephyr/nce_udp_demo/
+```
+
+Build for the thingy:91 board:  
+```
+west build -p -b thingy91_nrf9160_ns ../blueprint-zephyr/nce_udp_demo/
+```
+4. Flash to the nRF9160 DK board:  
+```
+west flash
+```
+5. Flash to the thingy:91 board:  
+*(i hope there is a better way for flashing this)*   
+To do this you first need to download the nRF Connect Desktop App [here](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop/Download?lang=en#infotabs), select "Linux" and download the AppImage.   
+*(this has been tested on nRF Connect Desktop App Version 5.0.0)*   
+Open the AppImage by typing in this command:  
+```
+exec ~/Downloads/nrfconnect-5.0.0-x86_64.appimage
+```
+After starting the app install the "Programmer" toolby clicking on "Install" next to the Programmer tool option. And click on "Open".  
+### Booting the Thingy:91 into MCU-Boot Mode
+1. Make sure the Thingy:91 is completely turned off.  
+2. Connect the Micro-USB cable.  
+3. Hold the middle button (SW3) on the Thingy:91 board.  
+4. Switch on the power (SW1) to the Thingy:91.   
+This will get the Thingy:91 into MCU-Boot Mode
+
+6. Click on "Select Device" and select the Thingy:91 board.  
+7. Click on "Add file" on the top left corner and navigate to the `build/` folder and select the `app_signed.hex` for this example it is at `~/ncs/nrf/build/zephyr/app_signed.hex`.  
+8. Finally press the "Write" button on the left side.  
+This will flash the .hex file onto the Thingy:91 board.
+*(it might take some time)*   
 
 
