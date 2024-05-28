@@ -214,6 +214,8 @@ This will flash the .hex file onto the Thingy:91 board.
 *(it might take some time)*  
 
 ## Working with the UDP 1NCE Zephyr blueprint  
+### Setup the 1NCE Portal to allow communication  
+*(todo)*
 ### Obtaining an Access Token
 To communicate with the 1NCE API resources you need to generate an access token. To do this go to this site [here](https://help.1nce.com/dev-hub/reference/postaccesstokenpost) on the right side you can put in your username and password which you should have from ordering the 1NCE SIM-Card kit. The username is your email address.   
 Below that there will be a code snippet generated which will look something like this:  
