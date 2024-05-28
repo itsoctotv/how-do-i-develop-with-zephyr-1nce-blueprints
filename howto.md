@@ -230,13 +230,16 @@ curl --request POST \
 '
 ```
 You can copy it and execute this command.  
-This will give you an access token aka a Bearer Token. Copy the string after ("access_token":"<token>") and save it somewhere.
+This will give you an access token aka a Bearer Token. Copy the string after ("access_token":"< generated_token >") and save it somewhere.
 
 ## Sending a command to the board
 To test the blueprint we can send a simple string to the board. To do this we can write a small script with `curl` in bash that does that.  
 The script looks something like this:  
 ```
 #!/bin/bash
+
+# Replace <YOUR_TOKEN_HERE> with the generated token!
+
 curl -X 'POST' 'https://api.1nce.com/management-api/v1/integrate/devices/8988228066614769819/actions/UDP' -H 'accept: application/json' -H 'Authorization: Bearer <YOUR_TOKEN_HERE>' -H 'Content-Type: application/json' -d '{
   "payload": "This is a sample string.",
   "payloadType": "STRING",
