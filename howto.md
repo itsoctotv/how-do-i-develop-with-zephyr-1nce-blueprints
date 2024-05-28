@@ -213,4 +213,39 @@ For this example it is at `~/ncs/nrf/build/zephyr/app_signed.hex`.
 This will flash the .hex file onto the Thingy:91 board.  
 *(it might take some time)*  
 
+## Working with the UDP 1NCE Zephyr blueprint  
+### Obtaining an Access Token
+To communicate with the 1NCE API resources you need to generate an access token. To do this go to this site [here](https://help.1nce.com/dev-hub/reference/postaccesstokenpost) on the right side you can put in your username and password which you should have from ordering the 1NCE SIM-Card kit. The username is your email address.   
+Below that there will be a code snippet generated which will look something like this:  
+```
+curl --request POST \
+     --url https://api.1nce.com/management-api/oauth/token \
+     --header 'accept: application/json' \
+     --header 'authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=' \
+     --header 'content-type: application/json' \
+     --data '
+{
+  "grant_type": "client_credentials"
+}
+'
+```
+You can copy it and execute this command.  
+This will give you an access token aka a Bearer Token. Copy the string after ("access_token":"<token>") and save it somewhere.
 
+## Sending a command to the board
+To test the blueprint we can send a simple string to the board. To do this we can write a small script with `curl` in bash that does that.  
+The script looks something like this:  
+```
+#!/bin/bash
+curl -X 'POST' 'https://api.1nce.com/management-api/v1/integrate/devices/8988228066614769819/actions/UDP' -H 'accept: application/json' -H 'Authorization: Bearer <YOUR_TOKEN_HERE>' -H 'Content-Type: application/json' -d '{
+  "payload": "This is a sample string.",
+  "payloadType": "STRING",
+  "port": 3000,
+  "requestMode": "SEND_NOW"
+}'
+```
+Save it, make it executable `chmod +x script.sh` and run it.    
+**Keep in mind that the access token expires in 3600 seconds (1 Hour). After that you need to rerun the script which will generate a new one.**  
+
+## Looking at the output of the blueprint
+*(todo)* 
