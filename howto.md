@@ -248,7 +248,7 @@ curl -X 'POST' 'https://api.1nce.com/management-api/v1/integrate/devices/8988228
 }'
 ```
 Save it, make it executable `chmod +x script.sh` and run it.    
-**Keep in mind that the access token expires in 3600 seconds (1 Hour). After that you need to rerun the script which will generate a new one.**  
+**Keep in mind that the access token expires in 3600 seconds (1 Hour). After that you need to generate a new token.**  
 
 ## Looking at the output of the blueprint
 *(todo)* 
