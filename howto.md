@@ -267,6 +267,11 @@ curl -X 'POST' 'https://api.1nce.com/management-api/v1/integrate/devices/<YOUR_D
 Save it, make it executable by doing `chmod +x script.sh` and run it.    
 **Keep in mind that the access token expires in 3600 seconds (1 hour). After that you need to generate a new token.**  
 
-## Looking at the output of the blueprint
+## Establishing a serial connection with your device  
 
-*(todo)* 
+To look at the output of the blueprint connect the device via a USB-Cable to your computer.   
+Next use a software like [minicom](https://wiki.emacinc.com/wiki/Getting_Started_With_Minicom) to establish a serial communication with your device.  
+Usually like this `minicom -D <dev>`. Replace `<dev>` with the actual device for example `/dev/ttyACM0`. You can use `sudo dmesg -w` to see how your device is called.  
+ 
+## Looking at the output of the blueprint
+ 
