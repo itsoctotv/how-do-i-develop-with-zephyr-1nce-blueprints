@@ -215,7 +215,15 @@ This will flash the .hex file onto the Thingy:91 board.
 
 ## Working with the UDP 1NCE Zephyr blueprint  
 ### Setup the 1NCE Portal to allow communication  
-*(todo)*
+
+1. Go to the [1NCE Portal](https://portal.1nce.com/portal/customer/dashboard) and navigate to the "1NCE OS" Tab.  
+2. Click on "Device Integrator".  
+3. Click on "New Integration" and choose UDP (for this example).  
+4. Finally click on "Activate and use this protocol".  
+
+Now you have setup your 1NCE Account to allow communication via UDP.  
+
+
 ### Obtaining an Access Token
 To communicate with the 1NCE API resources you need to generate an access token. To do this go to this site [here](https://help.1nce.com/dev-hub/reference/postaccesstokenpost) on the right side you can put in your username and password which you should have from ordering the 1NCE SIM-Card kit. The username is your email address.   
 Below that there will be a code snippet generated which will look something like this:  
@@ -234,6 +242,12 @@ curl --request POST \
 You can copy it and execute this command.  
 This will give you an access token aka a Bearer Token. Copy the string after ("access_token":"< generated_token >") and save it somewhere.
 
+### Getting the Device ID 
+To get the Device ID aka the ICCID:  
+1. Go to your 1NCE Portal [here](https://portal.1nce.com/portal/customer/dashboard).  
+2. Click on "My Sims".  
+3. Find the sim you want to use and copy the ICCID number.
+
 ## Sending a command to the board
 To test the blueprint we can send a simple string to the board. To do this we can write a small script with `curl` in bash that does that.  
 The script looks something like this:  
@@ -241,8 +255,9 @@ The script looks something like this:
 #!/bin/bash
 
 # Replace <YOUR_TOKEN_HERE> with the generated token!
+# Replace <YOUR_DEVICE_ID_HERE> with the ICCID of your SIM Card!
 
-curl -X 'POST' 'https://api.1nce.com/management-api/v1/integrate/devices/8988228066614769819/actions/UDP' -H 'accept: application/json' -H 'Authorization: Bearer <YOUR_TOKEN_HERE>' -H 'Content-Type: application/json' -d '{
+curl -X 'POST' 'https://api.1nce.com/management-api/v1/integrate/devices/<YOUR_DEVICE_ID_HERE/actions/UDP' -H 'accept: application/json' -H 'Authorization: Bearer <YOUR_TOKEN_HERE>' -H 'Content-Type: application/json' -d '{
   "payload": "This is a sample string.",
   "payloadType": "STRING",
   "port": 3000,
@@ -253,4 +268,5 @@ Save it, make it executable by doing `chmod +x script.sh` and run it.
 **Keep in mind that the access token expires in 3600 seconds (1 hour). After that you need to generate a new token.**  
 
 ## Looking at the output of the blueprint
+
 *(todo)* 
