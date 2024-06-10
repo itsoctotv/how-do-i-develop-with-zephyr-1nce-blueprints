@@ -324,4 +324,4 @@ RRC mode: Connected
 Socket created successfully
 Listening for incoming messages...
 ```
-    
+Now everything is setup, tested and (hopefully) working™.
