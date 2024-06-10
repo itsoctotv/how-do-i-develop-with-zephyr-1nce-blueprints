@@ -257,7 +257,7 @@ The script looks something like this:
 # Replace <YOUR_TOKEN_HERE> with the generated token!
 # Replace <YOUR_DEVICE_ID_HERE> with the ICCID of your SIM Card!
 
-curl -X 'POST' 'https://api.1nce.com/management-api/v1/integrate/devices/<YOUR_DEVICE_ID_HERE/actions/UDP' -H 'accept: application/json' -H 'Authorization: Bearer <YOUR_TOKEN_HERE>' -H 'Content-Type: application/json' -d '{
+curl -X 'POST' 'https://api.1nce.com/management-api/v1/integrate/devices/<YOUR_DEVICE_ID_HERE>/actions/UDP' -H 'accept: application/json' -H 'Authorization: Bearer <YOUR_TOKEN_HERE>' -H 'Content-Type: application/json' -d '{
   "payload": "This is a sample string.",
   "payloadType": "STRING",
   "port": 3000,
@@ -275,3 +275,53 @@ Usually like this `minicom -D <dev>`. Replace `<dev>` with the actual device for
  
 ## Looking at the output of the blueprint
  
+After connecting the device power it on and give it some time to boot up. You see something like this if it is ready:  
+```
+1NCE UDP sample has started
+Connecting... 
+LTE cell changed: Cell ID: ********, Tracking area: *****
+RRC mode: Connected
+Network registration status: Connected - roaming
+
+PSM parameter update: TAU: ****, Active time: -1
+Socket created successfully                        
+Listening for incoming messages...  
+```
+The Cell ID and Tracking area may be different depending on where it is.   
+
+After some time it will timeout and return back with:  
+```
+No message received                                                   
+D: location 2.                                                        
+                                                                      
+D: location 3.                                                        
+                                                                      
+D: location 8.                                                        
+                                                                      
+Transmitting UDP/IP payload of 38 bytes to the Hostname udp.os.1nce.c5
+Socket created successfully                                           
+Listening for incoming messages... 
+```
+and will listen for incoming messages again.  
+
+### Test-sending a message  
+
+After everything is setup, a serial connection and a connection to the cell tower has been established you can finally try to send a message with the `script.sh` mentioned earlier in the guide.  
+
+After executing your script output should look something like this:
+`{"message":"UDP message for port 3000 successfully created for device 8988228066614769819","id":"2hgH8e5FgMF2zw64kWoafYGclE6"}`.   
+
+And the serial output on the device should look something like this:   
+  
+```
+Listening for incoming messages...
+
+Received message: This is a sample string.         <-- Your message displayed here.
+RRC mode: Connected
+RRC mode: Idle
+
+RRC mode: Connected
+Socket created successfully
+Listening for incoming messages...
+```
+    
