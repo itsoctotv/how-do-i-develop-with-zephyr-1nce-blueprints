@@ -279,11 +279,11 @@ After connecting the device power it on and give it some time to boot up. You se
 ```
 1NCE UDP sample has started
 Connecting... 
-LTE cell changed: Cell ID: ********, Tracking area: *****
+LTE cell changed: Cell ID: 12345678, Tracking area: 12345
 RRC mode: Connected
 Network registration status: Connected - roaming
 
-PSM parameter update: TAU: ****, Active time: -1
+PSM parameter update: TAU: 1234, Active time: -1
 Socket created successfully                        
 Listening for incoming messages...  
 ```
