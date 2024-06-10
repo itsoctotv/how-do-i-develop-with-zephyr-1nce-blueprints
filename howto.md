@@ -308,7 +308,7 @@ and will listen for incoming messages again.
 
 After everything is setup, a serial connection and a connection to the cell tower has been established you can finally try to send a message with the `script.sh` mentioned earlier in the guide.  
 
-After executing your script output should look something like this:
+After executing your script output should look something like this:  
 `{"message":"UDP message for port 3000 successfully created for device <DEVICE_ID>","id":"<ID>"}`.   
 
 And the serial output on the device should look something like this:   
