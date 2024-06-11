@@ -192,7 +192,7 @@ Build for the nRF9160 DK board:
 west build -p -b nrf9160dk_nrf9160_ns ../blueprint-zephyr/nce_udp_demo/
 ```
 
-Build for the thingy:91 board:  
+Build for the Thingy:91 board:  
 ```
 west build -p -b thingy91_nrf9160_ns ../blueprint-zephyr/nce_udp_demo/
 ```
