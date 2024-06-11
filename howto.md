@@ -1,7 +1,7 @@
 # Setup, test and develop with 1NCE Zephyr Blueprints
 
-| Table of contents |
-| ----------------- |
+| Table of contents                     |
+| ----------------- | ----------------- |
 | [Setup nRF Connect SDK on Ubuntu 22.04 and newer](#setup-nrf-connect-sdk-on-ubuntu-22-04-and-newer) | [Flash the Thingy:91 board](#flash-the-thingy-91-board)|
 | [Get the nRF Connect SDK code](#get-the-nrf-connect-sdk-code) | [Working with the UDP 1NCE Zephyr blueprint](#working-with-the-udp-1nce-zephyr-blueprint) |
 | [Installing additional Python dependencies](#installing-additional-python-dependencies) | [Setup the 1NCE Portal to allow communication](#setup-the-1nce-portal-to-allow-communication) |
