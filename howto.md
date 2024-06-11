@@ -1,4 +1,38 @@
 *(todo) table of contents with header links*
+| Table of contents |
+| ----------------- |
+| [Setup nRF Connect SDK on Ubuntu 22.04 and newer](#Setup nRF Connect SDK on Ubuntu 22.04 and newer) |
+| [Get the nRF Connect SDK code](#get-the-nrf-connect-sdk-code)|
+| [Installing additional Python dependencies](#installing-additional-python-dependencies)|
+| [Installing nRF Command Line Tools](#installing-nrf-command-line-tools)|
+| [Integrating the 1NCE IoT C SDK](#integrating-the-1nce-iot-c-sdk)|
+| [Cloning and Flashing the Zephyr Blueprints](#cloning-and-flashing-the-zephyr-blueprints)        |
+| [Flash the nRF9160 DK board](#flash-the-nrf9160-dk-board)    |
+| [Booting the Thingy:91 into MCU-Boot Mode](#booting-the-thingy:91-into-mcu-boot-mode)        |
+| [Flash the Thingy:91 board](#flash-the-thingy:91-board)    |
+| [Working with the UDP 1NCE Zephyr blueprint](#working-with-the-udp-1nce-zephyr-blueprint)        |
+| [Setup the 1NCE Portal to allow communication](#setup-the-1nce-portal-to-allow-communication)    |
+| [Obtaining an Access Token](#obtaining-an-access-token)    |
+| [Getting the Device ID](#getting-the-device-id)|
+| [Sending a command to the board](#sending-a-command-to-the-board)    |
+| [Establishing a serial connection with your device](#establishing-a-serial-connection-with-your-device)    |
+| [Looking at the output of the blueprint](#looking-at-the-output-of-the-blueprint)        |
+| [Test-sending a message](#test-sending-a-message)|
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
 
 # Setup, test and develop with 1NCE Zephyr Blueprints
   
@@ -327,3 +361,8 @@ Socket created successfully
 Listening for incoming messages...
 ```
 Now everything is setup, tested and (hopefully) working™.
+
+
+# Troubleshooting 
+- good luck  
+
