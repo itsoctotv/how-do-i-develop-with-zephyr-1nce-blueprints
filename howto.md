@@ -27,7 +27,7 @@ sudo apt install --no-install-recommends git cmake ninja-build gperf \
   python3-dev python3-pip python3-setuptools python3-tk python3-wheel xz-utils file \
   make gcc gcc-multilib g++-multilib libsdl2-dev libmagic1
 ```
-3. Verfiy versions of the main dependencies installed with:
+3. Verify versions of the main dependencies installed with:
 ```
 cmake --version
 python3 --version
