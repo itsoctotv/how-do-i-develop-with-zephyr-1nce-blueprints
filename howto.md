@@ -1,4 +1,5 @@
-*(todo) table of contents with header links*
+# Setup, test and develop with 1NCE Zephyr Blueprints
+
 | Table of contents |
 | ----------------- |
 | [Setup nRF Connect SDK on Ubuntu 22.04 and newer](#setup-nrf-connect-sdk-on-ubuntu-22-04-and-newer) |
@@ -19,22 +20,6 @@
 | [Looking at the output of the blueprint](#looking-at-the-output-of-the-blueprint)        |
 | [Test-sending a message](#test-sending-a-message)|
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-# Setup, test and develop with 1NCE Zephyr Blueprints
   
 ## Setup nRF Connect SDK on Ubuntu 22.04 and newer  
 
