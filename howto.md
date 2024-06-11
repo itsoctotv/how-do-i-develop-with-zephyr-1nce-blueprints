@@ -319,7 +319,7 @@ and will listen for incoming messages again.
 
 ### Test-sending a message  
 
-After everything is setup, a serial connection and a connection to the cell tower has been established you can finally try to send a message with the `script.sh` mentioned earlier in the guide.  
+After everything is setup, a serial connection and a connection to the cell tower has been established you can finally try to send a message with the `script.sh` mentioned earlier in the guide [here](#sending-a-command-to-the-board).  
 
 After executing your script output should look something like this:  
 `{"message":"UDP message for port 3000 successfully created for device <DEVICE_ID>","id":"<ID>"}`.   
