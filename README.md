@@ -1,7 +1,7 @@
 # how-do-i-develop-with-zephyr-1nce-blueprints
 step-by-step instruction on how to setup, flash and develop with the 1nce zephyr blueprints on the nrf9160dk and the thingy91. (on Ubuntu 22.04)
 
-[howto]([https://help.1nce.com/dev-hub/docs/sdk-blueprints-zephyr](https://github.com/itsoctotv/how-do-i-develop-with-zephyr-1nce-blueprints/blob/main/howto.md)) 
+[howto](https://github.com/itsoctotv/how-do-i-develop-with-zephyr-1nce-blueprints/blob/main/howto.md)
 
 [blueprints](https://help.1nce.com/dev-hub/docs/sdk-blueprints-zephyr)  
 [nrf9160dk board](https://www.nordicsemi.com/-/media/Software-and-other-downloads/Product-Briefs/nRF9160-DK-product-brief.pdf)  
