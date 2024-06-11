@@ -74,7 +74,7 @@ Go into the `ncs/` folder:
 ```
 cd ncs/
 ```
-and ender the following commands:
+and enter the following commands:
 ```
 pip3 install --user -r zephyr/scripts/requirements.txt
 pip3 install --user -r nrf/scripts/requirements.txt
