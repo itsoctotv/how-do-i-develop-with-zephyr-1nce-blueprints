@@ -19,7 +19,7 @@
 | [Establishing a serial connection with your device](#establishing-a-serial-connection-with-your-device)    |
 | [Looking at the output of the blueprint](#looking-at-the-output-of-the-blueprint)        |
 | [Test-sending a message](#test-sending-a-message)|
-  
+| [Troubleshooting](#troubleshooting)  
   
 ## Setup nRF Connect SDK on Ubuntu 22.04 and newer  
 
