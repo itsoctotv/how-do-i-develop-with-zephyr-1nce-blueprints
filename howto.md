@@ -3,14 +3,14 @@
 | Table of contents |
 | ----------------- |
 | [Setup nRF Connect SDK on Ubuntu 22.04 and newer](#setup-nrf-connect-sdk-on-ubuntu-22-04-and-newer) | [Flash the Thingy:91 board](#flash-the-thingy-91-board)|
-| [Get the nRF Connect SDK code](#get-the-nrf-connect-sdk-code)| [Working with the UDP 1NCE Zephyr blueprint](#working-with-the-udp-1nce-zephyr-blueprint)|
-| [Installing additional Python dependencies](#installing-additional-python-dependencies)|[Setup the 1NCE Portal to allow communication](#setup-the-1nce-portal-to-allow-communication)|
-| [Installing nRF Command Line Tools](#installing-nrf-command-line-tools)|[Obtaining an Access Token](#obtaining-an-access-token)|
-| [Integrating the 1NCE IoT C SDK](#integrating-the-1nce-iot-c-sdk)|[Getting the Device ID](#getting-the-device-id)|
-| [Cloning and Flashing the Zephyr Blueprints](#cloning-and-flashing-the-zephyr-blueprints)|[Sending a command to the board](#sending-a-command-to-the-board)|
-| [Flash the nRF9160 DK board](#flash-the-nrf9160-dk-board)|[Establishing a serial connection with your device](#establishing-a-serial-connection-with-your-device)|
-| [Booting the Thingy:91 into MCU-Boot Mode](#booting-the-thingy-91-into-mcu-boot-mode)|[Looking at the output of the blueprint](#looking-at-the-output-of-the-blueprint)|
-| [Test-sending a message](#test-sending-a-message)|[Troubleshooting](#troubleshooting)|
+| [Get the nRF Connect SDK code](#get-the-nrf-connect-sdk-code) | [Working with the UDP 1NCE Zephyr blueprint](#working-with-the-udp-1nce-zephyr-blueprint) |
+| [Installing additional Python dependencies](#installing-additional-python-dependencies) | [Setup the 1NCE Portal to allow communication](#setup-the-1nce-portal-to-allow-communication) |
+| [Installing nRF Command Line Tools](#installing-nrf-command-line-tools) | [Obtaining an Access Token](#obtaining-an-access-token) |
+| [Integrating the 1NCE IoT C SDK](#integrating-the-1nce-iot-c-sdk) | [Getting the Device ID](#getting-the-device-id) |
+| [Cloning and Flashing the Zephyr Blueprints](#cloning-and-flashing-the-zephyr-blueprints) | [Sending a command to the board](#sending-a-command-to-the-board) |
+| [Flash the nRF9160 DK board](#flash-the-nrf9160-dk-board) | [Establishing a serial connection with your device](#establishing-a-serial-connection-with-your-device) |
+| [Booting the Thingy:91 into MCU-Boot Mode](#booting-the-thingy-91-into-mcu-boot-mode) | [Looking at the output of the blueprint](#looking-at-the-output-of-the-blueprint) |
+| [Test-sending a message](#test-sending-a-message) | [Troubleshooting](#troubleshooting) |
 
   
 ## Setup nRF Connect SDK on Ubuntu 22.04 and newer  
